@@ -1,0 +1,70 @@
+body {
+  margin: 30px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(45deg);
+  box-sizing: border-box;
+  display: none;
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  inset: -10px;
+  border-radius: 50%;
+  border: 10px solid rgb(160, 190, 222);
+  animation: prixClipFix 2s infinite linear;
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+.breed-select {
+  width: 500px;
+}
+.cat-info {
+  float: right;
+  margin-top: -50px;
+}
+
+.cat-info img {
+  float: left;
+  max-width: 500px;
+  height: auto;
+  border: 1px solid rgb(160, 190, 222);
+  border-radius: 25px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  margin: 10px 20px 10px 0;
+}
+
+.cat-info p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 500px;
+}
